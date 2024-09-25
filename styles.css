@@ -1,0 +1,201 @@
+/* Global reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #2c2c2c; /* Dark grey background */
+    color: #fff; /* White text for contrast */
+    position: relative;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+header nav ul li {
+    margin: 0 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Centered GIF */
+.center-gif {
+    display: flex; 
+    justify-content: 
+    center; 
+    align-items: center;
+    width: 100%;
+    z-index: 1; /* Place it on top of other content */
+}
+
+.center-gif img {
+    width: 200px; /* Adjust the width based on your GIF size */
+    height: auto;
+}
+
+/* Sections */
+section {
+    padding: 20px;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #fff;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+/* Contact form */
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form input, form textarea {
+    padding: 10px;
+    margin-top: 5px;
+}
+
+form button {
+    margin-top: 15px;
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #555;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+/* Background Images */
+.bg-images {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.bg-img {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: spin 10s linear infinite; /* Add spinning animation */
+}
+
+/* Randomly position images */
+.random1 {
+    top: 10%;
+    left: 5%;
+}
+
+.random2 {
+    top: 90%;
+    left: 90%;
+}
+
+.random3 {
+    top: 5%;
+    left: 80%;
+}
+
+.random4 {
+    top: 90%;
+    left: 60%;
+}
+
+.random5 {
+    top: 45%;
+    left: 85%;
+}
+
+.random6 {
+    top: 13%;
+    left: 48%;
+}
+
+.random7 {
+    top: 50%;
+    left: 0%;
+}
+
+.random8 {
+    top: 30%;
+    left: 5%;
+}
+
+.bg-img{
+    transform: scale(1.05);
+}
+
+.easeAni {
+    -webkit-transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+}
+
+.easeAni:hover{
+    transform: scale(1.05);
+}
+
+
+/* Spinning Animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .bg-img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .center-gif img {
+        width: 150px; /* Make the GIF smaller on mobile */
+    }
+}
